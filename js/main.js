@@ -11,10 +11,9 @@
         },
             'slow');
     });
-    $("#backtotop").click(function () {
-        $('html,body').animate({
-            scrollTop: $(".header-titles").offset().top
-        },
-            'slow');
+    $('#backtotop').click(function () {
+        $("html, body").animate({ scrollTop: 0 }, 500);
+        //$("html, body").scrollTop(0); //For without animation
+        return false;
     });
 });

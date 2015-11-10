@@ -104,7 +104,7 @@ img{
     font-weight:400;
     letter-spacing:2px;
 }
-.social-section ul{
+.social-section ul, footer-container ul{
 
     
 }
@@ -203,14 +203,24 @@ div#slider {
     height: 100%;
     opacity: 0;
     background: #ff3366;
-    -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     -o-transition: all ease .5s;
+    -webkit-transition: all ease .5s;
     transition: all ease .5s;
+    
 }
-.caption:hover{
-    opacity:0.85;
-}
+    .caption:hover {
+        opacity: 0.85;
+        -moz-transform: rotateY(360deg);
+        -ms-transform: rotateY(360deg);
+        -o-transform: rotateY(360deg);
+        -webkit-transform: rotateY(360deg);
+        transform: rotateY(360deg);
+        -moz-transition-duration: 2s;
+        -o-transition-duration: 2s;
+        -webkit-transition-duration: 2s;
+        transition-duration: 2s;
+    }
 .caption .caption-content{
         position: absolute;
     top: 10%;
@@ -242,11 +252,28 @@ div#slider {
 .skills p{
     text-align:justify;
 }
+.back-to-top-btn{
+    display:block;
+    visibility:hidden;
+}
+#backtotop:hover .back-to-top-btn{
+    visibility:visible;
+}
+.footer-container{
+    margin-top:5%;
+}
 .footer{
     height:20vh;
+    background-color: #2196F3;
+    text-align:center;
 }
-.footer a{
-    color:#000;
+.footer #social-links a i{
+}
+.footer #social-links a:hover{
+    color: #FF4081;
+}
+.footer a i.background{
+    color: #333333;
 }
 
 @media (max-width:1261px){
