@@ -1,0 +1,275 @@
+
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+
+#header {
+    /*text-align: center;*/
+    z-index: 2;
+    color: #fff;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 2em;
+    background: url(../assets/img/Dublin-Liffey-Hapenny-bridge-CREDIT-Failte-Ireland-Derek-Cullen.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-overflow-scrolling: touch;
+}
+
+.header-titles {
+    /*text-align: center;*/
+    z-index: 1;
+    position: relative;
+    background: rgba(34, 34, 34, 0.65);
+}
+.heading{
+    text-align:center;
+}
+
+#intro {
+    z-index: 2;
+    position: relative;
+}
+
+.tight , .expand{
+    padding: 0;
+    overflow: hidden;
+}
+
+    .expand a img {
+        max-width: 100%;
+        -moz-transition: all 2s;
+        -o-transition: all 2s;
+        -webkit-transition: all 2s;
+        transition: all 2s;
+    }
+.expand:hover a img{
+    -ms-transform:scale(1.2); /* IE 9 */
+    -moz-transform:scale(1.2); /* Firefox */
+    -webkit-transform:scale(1.2); /* Safari and Chrome */
+    -o-transform:scale(1.2); /* Opera */
+    transform:scale(1.2);
+}
+
+img{
+    vertical-align:middle;
+}
+.align-middle{text-align:center;}
+
+.btn-holder{
+    padding-top:5%;
+    text-align:center;
+}
+.clear-btn:link, .clear-btn:visited{
+    color: #fff;
+    background:none;
+    border: 1px solid #fff;
+    padding: 9px 30px;
+    min-width:10%;
+    display:inline-block;
+    text-decoration:none;
+    text-transform:uppercase;
+}
+.clear-btn:hover, .clear-btn:active{
+    opacity:0.8;
+    color:#fff;
+    border-color:#ff3366;
+    text-decoration:none;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+    
+}
+
+.z1 {
+    z-index: 1;
+}
+
+.social i {
+    padding-right: 4px;
+}
+
+.social-section {
+    padding-top: 4%;
+
+}
+.social-section .social-names{
+    text-transform:uppercase;
+    font-size:14px;
+    font-weight:400;
+    letter-spacing:2px;
+}
+.social-section ul{
+
+    
+}
+.social-section ul li{
+    list-style-type:none;
+    text-align:center;
+}
+.social-section ul li a{
+    margin: 2% 2%;
+    padding:1%
+}
+.social-section ul li a i{
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+.social-section ul li a:hover i{
+        color:#ff3366;
+        
+}
+a{
+    color:#fff;
+    text-decoration:none;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+a:hover{
+    color:#ff3366;
+    
+    text-decoration:none;
+}
+.fa-3x{
+    vertical-align:middle;
+}
+
+.img-portfolio {
+    display:block;
+    margin: 0 auto;
+}
+
+div#slider {
+    overflow: hidden;
+}
+
+    div#slider figure {
+        position: relative;
+        margin: 0;
+        -webkit-animation: 30s slidy2 infinite;
+        -moz-animation: 30s slidy2 infinite;
+        -o-animation: 30s slidy2 infinite;
+        animation: 30s slidy2 infinite;
+        left: 0;
+        text-align: left;
+        font-size: 0 !important;
+        width: 500%;
+        overflow: hidden;
+    }
+
+        div#slider figure img {
+            width: 20%;
+            float: left;
+        }
+
+.topic-description p{
+    position: absolute;
+    z-index:100;
+    left:10%;
+    top:5%;
+
+
+}
+.topic-description img{
+    width:100%;
+}
+
+.bgAndroidGreen{
+    background-color: #a4ca39;
+}
+.img-holder{
+    right: 0;
+    margin: 0 0 15px;
+}
+.portfolio-link{
+        display: block;
+    position: relative;
+    margin: 0 auto;
+    max-width: 480px;
+}
+
+.caption {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: #ff3366;
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    -o-transition: all ease .5s;
+    transition: all ease .5s;
+}
+.caption:hover{
+    opacity:0.85;
+}
+.caption .caption-content{
+        position: absolute;
+    top: 10%;
+    left:15%;
+    width: 75%;
+    height: 20px;
+    margin-top: -12px;
+    text-align:center;
+    font-size: 14px;
+    color: #fff;
+}
+.caption .caption-content i {
+    margin-top: -12px;
+}
+
+.skills-section{
+
+}
+.skills-section .heading{
+    padding-bottom:10%;
+    padding-top:10%;
+}
+.skills-section .skills{
+    text-align:center;
+}
+.skills-section .skills i{
+    padding: 0 3%;
+}
+.skills p{
+    text-align:justify;
+}
+.footer{
+    height:20vh;
+}
+.footer a{
+    color:#000;
+}
+
+@media (max-width:1261px){
+    .clear-btn{
+        margin-bottom:1em;
+    }
+}
+@media(min-width: 1200px){
+
+    .portfolio-container, .skills-section{
+        width:1170px;
+        margin: 0 auto;
+    }
+}
+@media (max-width:768px) and (min-width:320px){
+    .profile{
+        max-width:200px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+}
+
+@-webkit-keyframes slidy2 { 100% { left: -400%; } 95% { left: -300%; } 75% { left: -300%; } 70% { left: -200%; } 50% { left: -200%; } 45% { left: -100%; } 25% { left: -100%; } 20% { left: 0%; } 0% { left: 0%; } }
+@-moz-keyframes slidy2 { 100% { left: -400%; } 95% { left: -300%; } 75% { left: -300%; } 70% { left: -200%; } 50% { left: -200%; } 45% { left: -100%; } 25% { left: -100%; } 20% { left: 0%; } 0% { left: 0%; } }
+@-o-keyframes slidy2 { 100% { left: -400%; } 95% { left: -300%; } 75% { left: -300%; } 70% { left: -200%; } 50% { left: -200%; } 45% { left: -100%; } 25% { left: -100%; } 20% { left: 0%; } 0% { left: 0%; } }
+@keyframes slidy2 { 100% { left: -400%; } 95% { left: -300%; } 75% { left: -300%; } 70% { left: -200%; } 50% { left: -200%; } 45% { left: -100%; } 25% { left: -100%; } 20% { left: 0%; } 0% { left: 0%; } }
