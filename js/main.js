@@ -5,15 +5,29 @@
     }, 3000);
 
 
-    $("#portfolio-scroll").click(function () {
-        $('html,body').animate({
-            scrollTop: $(".portfolio-container").offset().top
+    //$("#portfolio-scroll").click(function () {
+    //    $('html,body').animate({
+    //        scrollTop: $(".portfolio-container").offset().top
+    //    },
+    //        'slow');
+    //});
+    $('#myForm').validate({
+        rules: {
+            field1: {
+                required: true
+            },
+            field2: {
+                required: true,
+                email: true
+            },
+            field4: {
+                required: true
+            }
         },
-            'slow');
-    });
-    $('#backtotop').click(function () {
-        $("html, body").animate({ scrollTop: 0 }, 500);
-        //$("html, body").scrollTop(0); //For without animation
-        return false;
+        submitHandler: function (form) {
+            alert('valid form submitted');
+            $('#myModal').modal('hide');
+            return false;
+        }
     });
 });

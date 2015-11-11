@@ -3,13 +3,17 @@
 <head>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">
     <link rel="stylesheet" href="css/custom.css" />
     <link rel="stylesheet" href="css/preloader.css" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/parallax.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -21,212 +25,296 @@
         <div class="loader-section section-right"></div>
 
     </div>-->
-    <div class="container-fluid prx-b" id="header">
-        <div class="row header-titles" id="heading-titles">
-            <div class="col-sm-7 z1">
-                <div class="row">
-                    <div class="col-sm-8 col-sm-push-4 push-down-title">
-                        <div style="width: 75%; margin-left:auto;margin-right:auto;">
+    <!-- Always shows a header, even in smaller screens. -->
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog">
+            <div class="modal-content">
 
-                            <h1 class="align-middle">Mark Lordan</h1>
-                            <h3 class="align-middle">Software Engineer</h3>
-                            <p id="desc" style="text-align: justify">
-                                I'm a young Irish developer living in Dublin. Full-stack and mobile app development are my areas of expertise. I'm currently studying
-                                for a BSc(Hons) in Computing.
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Get in touch</h4>
+                </div>
+                <div class="row modal-body" style="padding:20px;">
+                    <form class="form-horizontal col-sm-12" id="myForm">
+                        <div class="form-group"><label>Name <em class="required-icon">*</em></label><input type="text" class="form-control required" name="field1" data-placement="top" data-trigger="manual" placeholder="Name" aria-describedby="field1"></div>
+                        <div class="form-group"><label>E-mail <em class="required-icon">*</em></label><input type="text" class="form-control required" name="field2" data-placement="top" data-trigger="manual" placeholder="E-mail" aria-describedby="field2"></div>
+                        <div class="form-group"><label>Website</label><input type="text" class="form-control" name="field3" data-placement="top" data-trigger="manual" placeholder="Website" aria-describedby="field2"></div>
+                        <div class="form-group"><label>Message <em class="required-icon">*</em></label><textarea class="form-control" placeholder="Your message here.." name="field4" data-placement="top" data-trigger="manual"></textarea></div>
+                        <div class="form-group"><button type="submit" class="btn btn-success">Send</button> <button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span><a class="btn mdl-layout-title" id="title" href="index.html">Mark Lordan</a></span>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                  mdl-textfield--floating-label mdl-textfield--align-right">
+                    <label class="mdl-button mdl-js-button mdl-button--icon"
+                           for="fixed-header-drawer-exp">
+                        <i class="material-icons">search</i>
+                    </label>
+                    <div class="mdl-textfield__expandable-holder">
+                        <input class="mdl-textfield__input" type="text" name="sample"
+                               id="fixed-header-drawer-exp">
+                    </div>
+                </div>
+                <!-- Navigation. We hide it in small screens. -->
+                <nav class="mdl-navigation mdl-layout--large-screen-only">
+                    <a class="mdl-navigation__link" href="index.html">Home</a>
+                    <a class="mdl-navigation__link" href="about.html">About</a>
+                    <a class="mdl-navigation__link" href="portfolio.html">Portfolio</a>
+                    <div class="mdl-navigation__link btn-group social-section">
+                        <a class="mdl-navigation__link btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Contact <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-left">
+                            <li><a class="btn" href="http://www.twitter.com/marklordan" target="_blank"><i class="fa fa-twitter fa-2x"></i><span class="social-names">Twitter</span></a></li>
+                            <li><a class="btn" href="https://ie.linkedin.com/in/marklordan" target="_blank"><i class="fa fa-linkedin fa-2x"></i><span class="social-names">Linkedin</span></a></li>
+                            <li><a class="btn" href="https://instagram.com/marklordan/" target="_blank"><i class="fa fa-instagram fa-2x"></i><span class="social-names">Instagram</span></a></li>
+                            <li><a class="btn" href="https://github.com/DarkNormal/" target="_blank"><i class="fa fa-github fa-2x"></i><span class="social-names">Github</span></a></li>
+                            <li><a class="btn" data-toggle="modal" data-target="#myModal" href="#"><i class="fa fa-envelope-o fa-2x"></i><span class="social-names">E-mail</span></a></li>
+                        </ul>
+                    </div>
+
+                </nav>
+            </div>
+
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title"><span style="position:absolute; bottom: 4px;">Navigation</span></span>
+
+            <nav class="mdl-navigation">
+
+                <a class="mdl-navigation__link" href="index.html">Home</a>
+                <a class="mdl-navigation__link" href="about.html">About</a>
+                <a class="mdl-navigation__link" href="portfolio.html">Portfolio</a>
+                <div class="android-drawer-separator"></div>
+                <span class="mdl-navigation__link" href>Contact me</span>
+                <a class="mdl-navigation__link btn" href="http://www.twitter.com/marklordan" target="_blank"><i class="fa fa-twitter fa-2x"></i><span class="social-names"> Twitter</span></a>
+                <a class="mdl-navigation__link btn" href="https://ie.linkedin.com/in/marklordan" target="_blank"><i class="fa fa-linkedin fa-2x"></i><span class="social-names"> Linkedin</span></a>
+                <a class="mdl-navigation__link btn" href="https://instagram.com/marklordan/" target="_blank"><i class="fa fa-instagram fa-2x"></i><span class="social-names"> Instagram</span></a>
+                <a class="mdl-navigation__link btn" href="https://github.com/DarkNormal/" target="_blank"><i class="fa fa-github fa-2x"></i><span class="social-names"> Github</span></a>
+                <a class="mdl-navigation__link btn" data-toggle="modal" data-target="#myModal" href="#"><i class="fa fa-envelope-o fa-2x"></i><span class="social-names"> E-mail</span></a>
+
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <div class="page-content">
+
+                <div class="container-fluid prx-b" id="header">
+                    <div class="row header-titles" id="heading-titles">
+                        <div class="col-sm-6 col-sm-offset-3 z1">
+                            <div class="row">
+                                <div class="col-sm-8 col-sm-push-4 push-down-title">
+                                    <div style="width: 75%; margin-left:auto;margin-right:auto;">
+
+                                        <h1 class="align-middle">Mark Lordan</h1>
+                                        <h3 class="align-middle">Software Developer</h3>
+                                        <p id="desc" style="text-align: justify">
+                                            I'm a young Irish developer living in Dublin. Full-stack and mobile app development are my areas of expertise. I'm currently studying
+                                            for a BSc(Hons) in Computing at the Institute of Technology, Tallaght.
+                                        </p>
+                                        <p class="button-holder">
+                                            <a href="assets/docs/MarkLordan-resume.pdf" class="clear-btn" target="_blank">Download CV</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 col-sm-pull-8">
+                                    <img src="assets/img/profiler.png" class="img-responsive profile" />
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div>
+
+
+                    </div>
+                </div>
+                <div class="container-fluid portfolio-container" style="text-align:center">
+                    <section id="portfolio-work">
+                        <div class="row" style="padding-top:20%; padding-bottom:5%">
+                            <div class="col-sm-12">
+                                <h3 class="heading">Featured Portfolio</h3>
+                            </div>
+                        </div>
+                        <div class="row portfolio-row">
+                            <div class="col-sm-6 img-holder">
+                                <a href="/portfolio/3rdyearproject.html" class="portfolio-link">
+                                    <div class="col-sm-12 caption">
+                                        <div class="caption-content">
+                                            <h3>B-Our Guest</h3>
+                                            <span>A graphical restaurant reservation application</span> <br />
+                                            <span>Booking specific seats for flights, trains, concerts and movies can be done, so why not in a restaurant?</span>
+                                        </div>
+                                    </div>
+                                    <img class="img-responsive img-portfolio" src="assets/img/3rdyearapp.png" />
+                                </a>
+                            </div>
+                            <div class="col-sm-6 img-holder">
+                                <a href="/portfolio/4thdyearproject.html" class="portfolio-link">
+                                    <div class="col-sm-12 caption">
+                                        <div class="caption-content">
+                                            <h3>Final Year project</h3>
+                                            <span>Social event application</span> <br />
+                                            <span>Organising an event or joining communities can be hard, but this project aims to make it much easier and interactive</span>
+                                        </div>
+                                    </div>
+                                    <img class="img-responsive img-portfolio" src="assets/img/4thyearmockup.png" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row portfolio-row">
+                            <div class="col-sm-4 img-holder">
+                                <a href="/portfolio/gardatravel.html" class="portfolio-link">
+                                    <div class="col-sm-12 caption">
+                                        <div class="caption-content">
+                                            <h3>Garda Travel Club</h3>
+                                            <span>Due to database limitations, this travel agency was unable to perform basic queries. I created a tool based on specifications to enable this locally</span>
+                                        </div>
+                                    </div>
+                                    <img class="img-responsive img-portfolio" src="assets/img/gard-logo.png" />
+                                </a>
+                            </div>
+                            <div class="col-sm-4 img-holder">
+                                <a href="/portfolio/tipple.html" class="portfolio-link">
+                                    <div class="col-sm-12 caption">
+                                        <div class="caption-content">
+                                            <h3>Tipple Doc</h3>
+                                            <span>David and Mike launched Tipple Doc in 2012 with a basic WordPress website. I was tasked with a redesign to market the mobile application</span>
+                                        </div>
+                                    </div>
+                                    <img class="img-responsive img-portfolio" src="assets/img/tipple.png" />
+                                </a>
+                            </div>
+                            <div class="col-sm-4 img-holder">
+                                <a href="/portfolio/2ndyearproject.html" class="portfolio-link">
+                                    <div class="col-sm-12 caption">
+                                        <div class="caption-content">
+                                            <h3>2nd year project</h3>
+                                            <span>Hotel booking &amp; reservation system</span>
+                                            <span>A Java-based application with an admin management dashboard, providing a large number of features</span>
+                                        </div>
+                                    </div>
+                                    <img class="img-responsive img-portfolio" src="assets/img/2ndyearproject.png" />
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="container-fluid skills-section">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <hr />
+                            <h3 class="heading">Skills and Familiar Technologies</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-push-6 expand">
+                            <a href="projects.html" class="" title="image">
+                                <img src="assets/img/android-dev.png" />
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-sm-pull-6 skills">
+                            <h3>Android Development</h3>
+                            <p>
+                                One of my favourite platforms for development is mobile, specifically Android. My strong core skills in OOP languages such as Java and C# allow me to rapidly develop applications in a full-stack process.
+                                Google's extensive collection of APIs provide me with a set of tools to integrate my applications seamlessly into the Android universe and my server logic is developed with Node.js or C#.
                             </p>
-                            <p class="btn-holder">
-                                <a href="assets/docs/MarkLordan-resume.pdf" class="clear-btn" target="_blank">Download CV</a>
-                                <a href="#portfoli-container" class="clear-btn" id="portfolio-scroll">Portfolio</a>
+                            <p>I also enjoy UI design, which I'm currently taking a course in to improve my skills. I belive having the ability to understand the possibilites and limitations of both front-end and back-end mobile development is essential</p>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 skills">
+                            <span class="fa-stack fa-2x">
+                                <i class="fa fa-square fa-stack-2x"></i>
+                                <i class="fa fa-code fa-stack-1x fa-inverse"></i>
+                            </span>
+                            <i class="fa fa-database fa-3x"></i>
+                            <i class="fa fa-code-fork fa-3x"></i>
+                            <span class="fa-stack fa-2x">
+                                <i class="fa fa-square fa-stack-2x"></i>
+                                <i class="fa fa-terminal fa-stack-1x fa-inverse"></i>
+                            </span>
+                            <h3>C#, Java and SQL</h3>
+                            <p>
+                                Some of my strongest skills when it comes to programming is with Object-Orientated languages.
+                                The majority of my experience is with Java and C#, both being very similar in terms of syntax and practice.
+                                Many of the projects that I've been involved with include some form of database or data persistence, which is where
+                                my strong knowledge of SQL and databases shines. Hibernate and Entity Framework are of high importance for me as it
+                                increases the functionality of a program tenfold.
+                            </p>
+                        </div>
+                        <div class="col-sm-6 skills">
+                            <i class="fa fa-html5 fa-3x"></i>
+                            <i class="fa fa-css3 fa-3x"></i>
+                            <i class="fa fa-jsfiddle fa-3x"></i>
+                            <i class="fa fa-wordpress fa-3x"></i>
+                            <h3>Web &amp; Graphic Design</h3>
+
+                            <p>
+                                In the last number of years, I've created a number of websites for various clients using different technologies.
+                                Some of these include the IT Tallaght Snowsports Society, MyDealDoc.ie, and The Canal Cafe Vicarstown. I have used
+                                WordPress, HTML, CSS and JavaScript for these websites, and I have hosted and managed various other websites. The experience
+                                I gained creating and managing these sites via Microsoft Azure, AWS and Blacknight gave me invaluable knowledge to the process.
+                            </p>
+                            <p>
+                                I have also taken up graphic design and illustration to gain experience with these techniques, as web design regularly requires some form
+                                of graphic design incorporated into it. I completed 2 courses in Adobe Illustrator and Photoshop last year, which gave me a strong understanding
+                                of the basic uses of both applications.
                             </p>
                         </div>
                     </div>
-                    <div class="col-sm-4 col-sm-pull-8">
-                        <img src="assets/img/profiler.png" class="img-responsive profile" />
+
+                </div>
+                <div class="container-fluid footer-container">
+                    <div class="row footer">
+                        <div class="col-md-2 col-md-offset-2 col-md-push-7">
+                            <a class="btn" id="backtotop" href="#header">
+                                <span class="fa-stack fa-3x">
+                                    <i class="fa fa-circle fa-stack-2x background"></i>
+                                    <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
+                                </span>
+                                <span class="back-to-top-btn">Back to top</span>
+                            </a>
+                        </div>
+
+                        <div class="col-md-3 col-md-offset-1 col-md-pull-4">
+                            <h2>About</h2>
+                            <p>
+                                This site was developed using HTML, CSS and JavaScript along with various extras. Bootstrap was the primary framework for the website. I also used
+                                FontAwesome for the icons which provides scalable icons. <br /><a href="this-website.html" target="_blank" class="link-no-pink">Read the full website breakdown here > </a>
+                            </p>
+                        </div>
+                        <div class="col-md-4 col-md-pull-4" id="social-links">
+                            <h2>Connect with me</h2>
+                            <a class="btn" href="http://www.twitter.com/marklordan" target="_blank" title="Twitter"><i class="fa fa-twitter fa-3x"></i></a>
+                            <a class="btn" href="https://ie.linkedin.com/in/marklordan" target="_blank" title="Linkedin"><i class="fa fa-linkedin fa-3x"></i></a>
+
+                            <a class="btn" href="https://instagram.com/marklordan/" target="_blank" title="Instagram"><i class="fa fa-instagram fa-3x"></i></a>
+                            <a class="btn" href="https://github.com/DarkNormal/" target="_blank" title="GitHub"><i class="fa fa-github fa-3x"></i></a>
+                        </div>
+
                     </div>
-
                 </div>
             </div>
-            <div class="col-sm-5 social z1 social-section">
-                <ul>
-                    <li>
-                        <a class="btn btn-default" href="http://www.twitter.com/marklordan" target="_blank"><i class="fa fa-twitter fa-2x"></i><span class="social-names">Twitter</span></a>
-                        <a class="btn btn-default" href="https://ie.linkedin.com/in/marklordan" target="_blank"><i class="fa fa-linkedin fa-2x"></i><span class="social-names">Linkedin</span></a>
-                    </li>
-                    <li>
-                        <a class="btn btn-default" href="https://instagram.com/marklordan/" target="_blank"><i class="fa fa-instagram fa-2x"></i><span class="social-names">Instagram</span></a>
-                        <a class="btn btn-default" href="https://github.com/DarkNormal/" target="_blank"><i class="fa fa-github fa-2x"></i><span class="social-names">Github</span></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div>
-
-
-        </div>
+        </main>
     </div>
-    <div class="container-fluid portfolio-container" style="text-align:center">
-        <section id="portfolio-work">
-            <div class="row" style="padding-top:20%; padding-bottom:5%">
-                <div class="col-sm-12">
-                    <h3 class="heading">Featured Portfolio</h3>
-                </div>
-            </div>
-            <div class="row portfolio-row">
-                <div class="col-sm-6 img-holder">
-                    <a href="/portfolio/3rdyearproject.html" class="portfolio-link">
-                        <div class="col-sm-12 caption">
-                            <div class="caption-content">
-                                <h3>B-Our Guest</h3>
-                                <span>A graphical restaurant reservation application</span> <br />
-                                <span>Booking specific seats for flights, trains, concerts and movies can be done, so why not in a restaurant?</span>
-                            </div>
-                        </div>
-                        <img class="img-responsive img-portfolio" src="assets/img/3rdyearapp.png" />
-                    </a>
-                </div>
-                <div class="col-sm-6 img-holder">
-                    <a href="/portfolio/4thdyearproject.html" class="portfolio-link">
-                        <div class="col-sm-12 caption">
-                            <div class="caption-content">
-                                <h3>Final Year project</h3>
-                                <span>Social event application</span> <br />
-                                <span>Organising an event or joining communities can be hard, but this project aims to make it much easier and interactive</span>
-                            </div>
-                        </div>
-                        <img class="img-responsive img-portfolio" src="assets/img/4thyearmockup.png" />
-                    </a>
-                </div>
-            </div>
-            <div class="row portfolio-row">
-                <div class="col-sm-4 img-holder">
-                    <a href="/portfolio/gardatravel.html" class="portfolio-link">
-                        <div class="col-sm-12 caption">
-                            <div class="caption-content">
-                                <h3>Garda Travel Club</h3>
-                                <span>Due to database limitations, this travel agency was unable to perform basic queries. I created a tool based on specifications to enable this locally</span>
-                            </div>
-                        </div>
-                        <img class="img-responsive img-portfolio" src="assets/img/gard-logo.png" />
-                    </a>
-                </div>
-                <div class="col-sm-4 img-holder">
-                    <a href="/portfolio/tipple.html" class="portfolio-link">
-                        <div class="col-sm-12 caption">
-                            <div class="caption-content">
-                                <h3>Tipple Doc</h3>
-                                <span>David and Mike launched Tipple Doc in 2012 with a basic WordPress website. I was tasked with a redesign to market the mobile application</span>
-                            </div>
-                        </div>
-                        <img class="img-responsive img-portfolio" src="assets/img/tipple.png" />
-                    </a>
-                </div>
-                <div class="col-sm-4 img-holder">
-                    <a href="/portfolio/2ndyearproject.html" class="portfolio-link">
-                        <div class="col-sm-12 caption">
-                            <div class="caption-content">
-                                <h3>2nd year project</h3>
-                                <span>Hotel booking &amp; reservation system</span>
-                                <span>A Java-based application with an admin management dashboard, providing a large number of features</span>
-                            </div>
-                        </div>
-                        <img class="img-responsive img-portfolio" src="assets/img/2ndyearproject.png" />
-                    </a>
-                </div>
-            </div>
-        </section>
-    </div>
-    <div class="container-fluid skills-section">
-        <div class="row">
-            <div class="col-sm-12">
-                <hr />
-                <h3 class="heading">Skills and Familiar Technologies</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-6 col-sm-push-6 expand">
-                <a href="projects.html" class="" title="image">
-                    <img src="assets/img/android-dev.png" />
-                </a>
-            </div>
-            <div class="col-sm-6 col-sm-pull-6 skills">
-                <h3>Android Development</h3>
-                <p>
-                    One of my favourite platforms for development is mobile, specifically Android. My strong core skills in OOP languages such as Java and C# allow me to rapidly develop applications in a full-stack process.
-                    Google's extensive collection of APIs provide me with a set of tools to integrate my applications seamlessly into the Android universe and my server logic is developed with Node.js or C#.
-                </p>
-                <p>I also enjoy UI design, which I'm currently taking a course in to improve my skills. I belive having the ability to understand the possibilites and limitations of both front-end and back-end mobile development is essential</p>
-            </div>
 
-        </div>
-        <div class="row">
-            <div class="col-sm-6 skills">
-                <span class="fa-stack fa-2x">
-                    <i class="fa fa-square fa-stack-2x"></i>
-                    <i class="fa fa-code fa-stack-1x fa-inverse"></i>
-                </span>
-                <i class="fa fa-database fa-3x"></i>
-                <i class="fa fa-code-fork fa-3x"></i>
-                <span class="fa-stack fa-2x">
-                    <i class="fa fa-square fa-stack-2x"></i>
-                    <i class="fa fa-terminal fa-stack-1x fa-inverse"></i>
-                </span>
-                <h3>C#, Java and SQL</h3>
-                <p>
-                    Some of my strongest skills when it comes to programming is with Object-Orientated languages.
-                    The majority of my experience is with Java and C#, both being very similar in terms of syntax and practice.
-                    Many of the projects that I've been involved with include some form of database or data persistence, which is where
-                    my strong knowledge of SQL and databases shines.
-                </p>
-            </div>
-            <div class="col-sm-6 skills">
-                <i class="fa fa-html5 fa-3x"></i>
-                <i class="fa fa-css3 fa-3x"></i>
-                <i class="fa fa-jsfiddle fa-3x"></i>
-                <i class="fa fa-wordpress fa-3x"></i>
-                <h3>Web &amp; Graphic Design</h3>
-
-                <p>
-                    In the last number of years, I've created a number of websites for various clients using different technologies.
-                    Some of these include the IT Tallaght Snowsports Society, MyDealDoc.ie, and The Canal Cafe Vicarstown. I have used
-                    WordPress, HTML, CSS and JavaScript for these websites, and I have hosted and managed various other websites. The experience
-                    I gained creating and managing these sites via Microsoft Azure, AWS and Blacknight gave me invaluable knowledge to the process.
-                </p>
-                <p>
-                    I have also taken up graphic design and illustration to gain experience with these techniques, as web design regularly requires some form
-                    of graphic design incorporated into it. I completed 2 courses in Adobe Illustrator and Photoshop last year, which gave me a strong understanding
-                    of the basic uses of both applications.
-                </p>
-            </div>
-        </div>
-
-    </div>
-    <div class="container-fluid footer-container">
-        <div class="row footer">
-            <div class="col-sm-4">
-                <p>
-                    This site was developed using HTML, CSS and JavaScript along with various extras. Bootstrap was the primary framework for the website. I also used
-                    FontAwesome 
-                </p>
-            </div>
-            <div class="col-sm-4" id="social-links">
-                <h2>Connect with me</h2>
-                <a class="btn" href="http://www.twitter.com/marklordan" target="_blank"><i class="fa fa-twitter fa-3x"></i></a>
-                <a class="btn" href="https://ie.linkedin.com/in/marklordan" target="_blank"><i class="fa fa-linkedin fa-3x"></i></a>
-
-                <a class="btn" href="https://instagram.com/marklordan/" target="_blank"><i class="fa fa-instagram fa-3x"></i></a>
-                <a class="btn" href="https://github.com/DarkNormal/" target="_blank"><i class="fa fa-github fa-3x"></i></a>
-            </div>
-            <div class="col-sm-4">
-                <a class="btn" id="backtotop">
-                    <span class="fa-stack fa-3x">
-                        <i class="fa fa-circle fa-stack-2x background"></i>
-                        <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <span class="back-to-top-btn">Back to top</span>
-                </a>
-            </div>
-        </div>
-    </div>
     <!--<div class="container-fluid zp" id="intro">
         <div class="row">
             <div class="col-sm-6 tight expand" id="android-logo">
