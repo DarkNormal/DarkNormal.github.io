@@ -197,6 +197,11 @@ a {
         color: #ff3366;
         text-decoration: none;
     }
+    a:active, a:link, a:visited {
+        text-decoration: none;
+        color: #fff;
+    }
+
 
 .fa-3x {
     vertical-align: middle;
@@ -329,8 +334,8 @@ div#slider {
     color: #fff;
 }
 
-.link-no-pink:hover {
-    color: #d4d4d4;
+a.link-no-pink:hover {
+    color: #d4d4d4 !important;
 }
 
 .footer p {
@@ -342,7 +347,14 @@ div#slider {
 }
 
 .footer #social-links a:hover {
-    color: #FF4081;
+    color: #FF4081 !important;
+}
+.footer #social-links a.link-no-pink:hover{
+    color:#fff !important;
+}
+.footer #social-links a:visited, a:active  {
+    color: #fff;
+    text-decoration:none;
 }
 
 .footer a i.background {

@@ -53,7 +53,7 @@
     </div>
 
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <header class="mdl-layout__header">
+        <header class="mdl-layout__header mdl-layout__header--waterfall">
             <div class="mdl-layout__header-row">
                 <!-- Title -->
                 <span><a class="btn mdl-layout-title" id="title" href="index.html">Mark Lordan</a></span>
@@ -283,14 +283,15 @@
                 </div>
                 <div class="container-fluid footer-container">
                     <div class="row footer">
+                        <!-- Disabled due to bug with Material Design layout- from github -->
                         <div class="col-md-2 col-md-offset-2 col-md-push-7">
-                            <a class="btn" id="backtotop" href="#header">
+                            <!--<a class="btn" id="backtotop" href="#header">
                                 <span class="fa-stack fa-3x">
                                     <i class="fa fa-circle fa-stack-2x background"></i>
                                     <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
                                 </span>
                                 <span class="back-to-top-btn">Back to top</span>
-                            </a>
+                            </a>-->
                         </div>
 
                         <div class="col-md-3 col-md-offset-1 col-md-pull-4">
@@ -307,6 +308,12 @@
 
                             <a class="btn" href="https://instagram.com/marklordan/" target="_blank" title="Instagram"><i class="fa fa-instagram fa-3x"></i></a>
                             <a class="btn" href="https://github.com/DarkNormal/" target="_blank" title="GitHub"><i class="fa fa-github fa-3x"></i></a>
+                            <a class="btn" data-toggle="modal" data-target="#myModal" title="E-mail" href="#"><i class="fa fa-envelope-o fa-3x"></i></a>
+                            <div style=" padding-top:5%">
+                                <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent link-no-pink" href="https://github.com/DarkNormal/DarkNormal.github.io" target="_blank">
+                                    Source Code
+                                </a>
+                            </div>
                         </div>
 
                     </div>
