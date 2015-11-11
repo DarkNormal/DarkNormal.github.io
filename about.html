@@ -1,10 +1,295 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title></title>
-	<meta charset="utf-8" />
+    <title>About - Mark Lordan</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/time-line.css" />
+    <link rel="stylesheet" href="css/preloader.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/parallax.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog">
+            <div class="modal-content">
 
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Get in touch</h4>
+                </div>
+                <div class="row modal-body" style="padding:20px;">
+                    <form class="form-horizontal col-sm-12" id="myForm">
+                        <div class="form-group"><label>Name <em class="required-icon">*</em></label><input type="text" class="form-control required" name="field1" data-placement="top" data-trigger="manual" placeholder="Name" aria-describedby="field1"></div>
+                        <div class="form-group"><label>E-mail <em class="required-icon">*</em></label><input type="text" class="form-control required" name="field2" data-placement="top" data-trigger="manual" placeholder="E-mail" aria-describedby="field2"></div>
+                        <div class="form-group"><label>Website</label><input type="text" class="form-control" name="field3" data-placement="top" data-trigger="manual" placeholder="Website" aria-describedby="field2"></div>
+                        <div class="form-group"><label>Message <em class="required-icon">*</em></label><textarea class="form-control" placeholder="Your message here.." name="field4" data-placement="top" data-trigger="manual"></textarea></div>
+                        <div class="form-group"><button type="submit" class="btn btn-success">Send</button> <button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span><a class="btn mdl-layout-title" id="title" href="index.html">Mark Lordan</a></span>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                  mdl-textfield--floating-label mdl-textfield--align-right">
+                    <label class="mdl-button mdl-js-button mdl-button--icon"
+                           for="fixed-header-drawer-exp">
+                        <i class="material-icons">search</i>
+                    </label>
+                    <div class="mdl-textfield__expandable-holder">
+                        <input class="mdl-textfield__input" type="text" name="sample"
+                               id="fixed-header-drawer-exp">
+                    </div>
+                </div>
+                <!-- Navigation. We hide it in small screens. -->
+                <nav class="mdl-navigation mdl-layout--large-screen-only">
+                    <a class="mdl-navigation__link" href="index.html">Home</a>
+                    <a class="mdl-navigation__link" href="about.html">About</a>
+                    <a class="mdl-navigation__link" href="portfolio.html">Portfolio</a>
+                    <div class="mdl-navigation__link btn-group social-section">
+                        <a class="mdl-navigation__link btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Contact <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-left">
+                            <li><a class="btn" href="http://www.twitter.com/marklordan" target="_blank"><i class="fa fa-twitter fa-2x"></i><span class="social-names">Twitter</span></a></li>
+                            <li><a class="btn" href="https://ie.linkedin.com/in/marklordan" target="_blank"><i class="fa fa-linkedin fa-2x"></i><span class="social-names">Linkedin</span></a></li>
+                            <li><a class="btn" href="https://instagram.com/marklordan/" target="_blank"><i class="fa fa-instagram fa-2x"></i><span class="social-names">Instagram</span></a></li>
+                            <li><a class="btn" href="https://github.com/DarkNormal/" target="_blank"><i class="fa fa-github fa-2x"></i><span class="social-names">Github</span></a></li>
+                            <li><a class="btn" data-toggle="modal" data-target="#myModal" href="#"><i class="fa fa-envelope-o fa-2x"></i><span class="social-names">E-mail</span></a></li>
+                        </ul>
+                    </div>
+
+                </nav>
+            </div>
+
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title"><span style="position:absolute; bottom: 4px;">Navigation</span></span>
+
+            <nav class="mdl-navigation">
+
+                <a class="mdl-navigation__link" href="index.html">Home</a>
+                <a class="mdl-navigation__link" href="about.html">About</a>
+                <a class="mdl-navigation__link" href="portfolio.html">Portfolio</a>
+                <div class="android-drawer-separator"></div>
+                <span class="mdl-navigation__link" href>Contact me</span>
+                <a class="mdl-navigation__link btn" href="http://www.twitter.com/marklordan" target="_blank"><i class="fa fa-twitter fa-2x"></i><span class="social-names"> Twitter</span></a>
+                <a class="mdl-navigation__link btn" href="https://ie.linkedin.com/in/marklordan" target="_blank"><i class="fa fa-linkedin fa-2x"></i><span class="social-names"> Linkedin</span></a>
+                <a class="mdl-navigation__link btn" href="https://instagram.com/marklordan/" target="_blank"><i class="fa fa-instagram fa-2x"></i><span class="social-names"> Instagram</span></a>
+                <a class="mdl-navigation__link btn" href="https://github.com/DarkNormal/" target="_blank"><i class="fa fa-github fa-2x"></i><span class="social-names"> Github</span></a>
+                <a class="mdl-navigation__link btn" data-toggle="modal" data-target="#myModal" href="#"><i class="fa fa-envelope-o fa-2x"></i><span class="social-names"> E-mail</span></a>
+
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <div class="page-content" id="page-content">
+                <div class="container">
+                    <div class="page-header">
+                        <h1 id="timeline">About me</h1>
+                        <p>
+                            I was born in Dublin in '93 and spent most of my time between Dublin, Cork or Switzerland with my family. I've had a very keen interest in technology from the early age of 6 when
+                            I got my hands on my first original PlayStation. From this I progressed through a plethora of other devices and I'm still gathering more to this day. My first experience of programming was at 12 when I enrolled
+                            in Technology. Working with circuit boards, components and microcontrollers was a great experience, and set me straight towards studying Computer Science in the future. (Much better than my aspiration of Bin-man at age 8)
+                        </p>
+                        <p>
+                            I graduated secondary school with an award for academic excellence in Technology and recieved a total of 440 points in the Leaving Certificate. From there I was accepted into the Institute of Technology in Tallaght, Dublin where I would
+                            study Computing - a very practical and broad coure in comparison to other Computer Science courses. The major topics covered in the last 4 years include Software Development, Web Design and Development, Networking (in a certified Cisco environment, using physical components),
+                            Advanced Database Systems and Object Orientated System Analysis and Design.
+                        </p>
+                        <p>
+                            While I was still in school, I got a part-time job in Glanbia working in a distribution warehouse. I started in 2011 and I quickly became one of the most consistent workers there. I usually
+                            worked weekday evenings and every Saturday up until September 2014 when I was pressed for further commitment. This would have interfered with my college studies so I decided on what was more important for my future.
+                            <br />
+                            I now host and maintain a multitude of websites, including designing new interfaces for individuals or businesses. I recently created a small Java application for a business which saved them at least €1500 in upfront-costs as well as significantly increased
+                            the efficiency of what was previously being used.
+
+
+                        </p>
+                    </div>
+                    <ul class="timeline">
+                        <li style="text-align:center;"><span style="padding-top:-20px;">Education</span></li>
+                        <li>
+                            <div class="timeline-badge timeline-panel-right slideanim"><i class="fa fa-graduation-cap"></i></div>
+                            <div class="timeline-panel timeline-panel-right slideanim">
+                                <div class="timeline-heading">
+                                    <h4 class="timeline-title">440 points earned in the Leaving Certificate</h4>
+                                    <p style="font-style:italic">Holy Family Community School Rathcoole, Dublin</p>
+                                    <p>
+                                        2006 - 2012 <br />
+                                        440 points, including A1 in higher level Technology subject
+                                    </p>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>
+                                        My best subjcts were Technology, Physics, and English. I recieved an award for academic excellence in Technology.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-badge timeline-panel-left slideanim"><i class="fa fa-graduation-cap"></i></div>
+                            <div class="timeline-panel timeline-panel-left slideanim" >
+                                <div class="timeline-heading">
+                                    <h4 class="timeline-title">BSc. (Hons) in Computing</h4>
+                                    <!--<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11 hours ago via Twitter</small></p>-->
+                                    <p style="font-style:italic">Institute of Technology Tallaght, Dublin</p>
+                                </div>
+                                <div class="timeline-body">
+                                    
+                                    <p>
+                                        2012 - Present <br />
+                                        Overall GPA: 3.49
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="text-align:center;"><span style="padding-top:-20px;">Experience</span></li>
+                        <li>
+                            <div class="timeline-badge timeline-panel-right slideanim"><i class="fa fa-briefcase"></i></div>
+                            <div class="timeline-panel timeline-panel-right slideanim">
+                                <div class="timeline-heading">
+                                    <h4 class="timeline-title">Glanbia</h4>
+                                    <p style="font-style:italic">Distribution depot, Fonthill, Dublin</p>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>
+                                        2011 - 2014 <br />
+                                        Picked and organised customer orders, dealt with customer operations and queries. Received numerous praises on work efficiency, particularly in a group situation.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>
+                                        Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.
+                                        Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-badge info"><i class="glyphicon glyphicon-floppy-disk"></i></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>
+                                        Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.
+                                        Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.
+                                    </p>
+                                    <hr>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                                            <i class="glyphicon glyphicon-cog"></i> <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Action</a></li>
+                                            <li><a href="#">Another action</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>
+                                        Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.
+                                        Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>
+                                        Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.
+                                        Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="container-fluid footer-container">
+                    <div class="row footer">
+                        <!-- Disabled due to bug with Material Design layout- from github -->
+                        <div class="col-md-2 col-md-offset-2 col-md-push-7">
+                            <!--<a class="btn" id="backtotop" href="#header">
+                                <span class="fa-stack fa-3x">
+                                    <i class="fa fa-circle fa-stack-2x background"></i>
+                                    <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
+                                </span>
+                                <span class="back-to-top-btn">Back to top</span>
+                            </a>-->
+                        </div>
+
+                        <div class="col-md-3 col-md-offset-1 col-md-pull-4">
+                            <h2>About</h2>
+                            <p>
+                                This site was developed using HTML, CSS and JavaScript along with various extras. Bootstrap was the primary framework for the website. I also used
+                                FontAwesome for the icons which provides scalable icons. <br /><a href="this-website.html" target="_blank" class="link-no-pink">Read the full website breakdown here > </a>
+                            </p>
+                        </div>
+                        <div class="col-md-4 col-md-pull-4" id="social-links">
+                            <h2>Connect with me</h2>
+                            <a class="btn" href="http://www.twitter.com/marklordan" target="_blank" title="Twitter"><i class="fa fa-twitter fa-3x"></i></a>
+                            <a class="btn" href="https://ie.linkedin.com/in/marklordan" target="_blank" title="Linkedin"><i class="fa fa-linkedin fa-3x"></i></a>
+
+                            <a class="btn" href="https://instagram.com/marklordan/" target="_blank" title="Instagram"><i class="fa fa-instagram fa-3x"></i></a>
+                            <a class="btn" href="https://github.com/DarkNormal/" target="_blank" title="GitHub"><i class="fa fa-github fa-3x"></i></a>
+                            <a class="btn" data-toggle="modal" data-target="#myModal" title="E-mail" href="#"><i class="fa fa-envelope-o fa-3x"></i></a>
+                            <div style=" padding-top:5%">
+                                <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent link-no-pink" href="https://github.com/DarkNormal/DarkNormal.github.io" target="_blank">
+                                    Source Code
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
 </body>
 </html>
