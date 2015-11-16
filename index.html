@@ -8,12 +8,7 @@
     <link rel="stylesheet" href="css/custom.css" />
     <link rel="stylesheet" href="css/preloader.css" />
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
-    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/parallax.js"></script>
+    
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -58,7 +53,7 @@
         <header class="mdl-layout__header ">
             <div class="mdl-layout__header-row">
                 <!-- Title -->
-                <span><a class="btn mdl-layout-title" id="title" href="index.html">Mark Lordan</a></span>
+                <span><a class="btn mdl-layout-title white-link" id="title" href="index.html">Mark Lordan</a></span>
                 <!-- Add spacer, to align navigation to the right -->
                 <div class="mdl-layout-spacer"></div>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
@@ -118,7 +113,7 @@
                 <div class="container-fluid prx-b" id="header">
                     <div class="row header-titles" id="heading-titles">
                         <div class="col-sm-8 col-sm-offset-2 z1">
-                            <div class="row">
+                            <div class="row white-text">
                                 <div class="col-sm-8 col-sm-push-4 push-down-title">
                                     <div style="width: 75%; margin-left:auto;margin-right:auto;">
 
@@ -128,7 +123,7 @@
                                             I'm a young Irish developer living in Dublin. Full-stack and mobile app development are my areas of expertise. I'm currently studying
                                             for a BSc(Hons) in Computing at the Institute of Technology, Tallaght.
                                         </p>
-                                        <p class="button-holder">
+                                        <p class="button-holder align-middle">
                                             <a href="assets/docs/MarkLordan-resume.pdf" class="clear-btn" target="_blank">Download CV</a>
                                         </p>
                                     </div>
@@ -155,7 +150,7 @@
                         </div>
                         <div class="row portfolio-row">
                             <div class="col-sm-6 img-holder">
-                                <a href="/portfolio/3rdyearproject.html" class="portfolio-link">
+                                <a href="portfolio.html" class="portfolio-link">
                                     <div class="col-sm-12 caption">
                                         <div class="caption-content">
                                             <h3>B-Our Guest</h3>
@@ -167,7 +162,7 @@
                                 </a>
                             </div>
                             <div class="col-sm-6 img-holder">
-                                <a href="/portfolio/4thdyearproject.html" class="portfolio-link">
+                                <a href="portfolio.html" class="portfolio-link">
                                     <div class="col-sm-12 caption">
                                         <div class="caption-content">
                                             <h3>Final Year project</h3>
@@ -181,7 +176,7 @@
                         </div>
                         <div class="row portfolio-row">
                             <div class="col-sm-4 img-holder">
-                                <a href="/portfolio/gardatravel.html" class="portfolio-link">
+                                <a href="portfolio.html" class="portfolio-link">
                                     <div class="col-sm-12 caption">
                                         <div class="caption-content">
                                             <h3>Garda Travel Club</h3>
@@ -203,7 +198,7 @@
                                 </a>
                             </div>
                             <div class="col-sm-4 img-holder">
-                                <a href="/portfolio/2ndyearproject.html" class="portfolio-link">
+                                <a href="portfolio.html" class="portfolio-link">
                                     <div class="col-sm-12 caption">
                                         <div class="caption-content">
                                             <h3>2nd year project</h3>
@@ -220,18 +215,17 @@
                 <div class="container-fluid skills-section">
                     <div class="row">
                         <div class="col-sm-12">
-                            <hr />
-                            <h3 class="heading">Skills and Familiar Technologies</h3>
+                            <h3 class="heading align-middle">Skills and Familiar Technologies</h3>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-6 col-sm-push-6 expand">
-                            <a href="projects.html" class="" title="image">
+                            <a href="portfolio.html" class="" title="image">
                                 <img src="assets/img/android-dev.png" />
                             </a>
                         </div>
                         <div class="col-sm-6 col-sm-pull-6 skills">
-                            <h3>Android Development</h3>
+                            <h3 class="align-middle">Android Development</h3>
                             <p>
                                 One of my favourite platforms for development is mobile, specifically Android. My strong core skills in OOP languages such as Java and C# allow me to rapidly develop applications in a full-stack process.
                                 Google's extensive collection of APIs provide me with a set of tools to integrate my applications seamlessly into the Android universe and my server logic is developed with Node.js or C#.
@@ -242,17 +236,19 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-6 skills">
-                            <span class="fa-stack fa-2x">
-                                <i class="fa fa-square fa-stack-2x"></i>
-                                <i class="fa fa-code fa-stack-1x fa-inverse"></i>
-                            </span>
-                            <i class="fa fa-database fa-3x"></i>
-                            <i class="fa fa-code-fork fa-3x"></i>
-                            <span class="fa-stack fa-2x">
-                                <i class="fa fa-square fa-stack-2x"></i>
-                                <i class="fa fa-terminal fa-stack-1x fa-inverse"></i>
-                            </span>
-                            <h3>C#, Java and SQL</h3>
+                            <div class="align-middle">
+                                <span class="fa-stack fa-2x">
+                                    <i class="fa fa-square fa-stack-2x"></i>
+                                    <i class="fa fa-code fa-stack-1x fa-inverse"></i>
+                                </span>
+                                <i class="fa fa-database fa-3x"></i>
+                                <i class="fa fa-code-fork fa-3x"></i>
+                                <span class="fa-stack fa-2x">
+                                    <i class="fa fa-square fa-stack-2x"></i>
+                                    <i class="fa fa-terminal fa-stack-1x fa-inverse"></i>
+                                </span>
+                                <h3>C#, Java and SQL</h3>
+                            </div>
                             <p>
                                 Some of my strongest skills when it comes to programming is with Object-Orientated languages.
                                 The majority of my experience is with Java and C#, both being very similar in terms of syntax and practice.
@@ -262,11 +258,13 @@
                             </p>
                         </div>
                         <div class="col-sm-6 skills">
-                            <i class="fa fa-html5 fa-3x"></i>
-                            <i class="fa fa-css3 fa-3x"></i>
-                            <i class="fa fa-jsfiddle fa-3x"></i>
-                            <i class="fa fa-wordpress fa-3x"></i>
-                            <h3>Web &amp; Graphic Design</h3>
+                            <div class="align-middle">
+                                <i class="fa fa-html5 fa-3x"></i>
+                                <i class="fa fa-css3 fa-3x"></i>
+                                <i class="fa fa-jsfiddle fa-3x"></i>
+                                <i class="fa fa-wordpress fa-3x"></i>
+                                <h3>Web &amp; Graphic Design</h3>
+                            </div>
 
                             <p>
                                 In the last number of years, I've created a number of websites for various clients using different technologies.
@@ -286,17 +284,16 @@
                 <div class="container-fluid footer-container">
                     <div class="row footer">
                         <!-- Disabled due to bug with Material Design layout- from github -->
-                        <div class="col-md-2 col-md-offset-2 col-md-push-7">
-                            <!--<a class="btn" id="backtotop" href="#header">
-                                <span class="fa-stack fa-3x">
-                                    <i class="fa fa-circle fa-stack-2x background"></i>
-                                    <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
-                                </span>
-                                <span class="back-to-top-btn">Back to top</span>
-                            </a>-->
+                        <div class="col-md-3 col-md-push-8">
+                            <h2>GitHub Pages</h2>
+                            <p>
+                                By committing all the website files to a GitHub repository, a website can be accessed using GitHub Pages. The repository must be called your_github_username.github.io, and this will allow the website to be created.
+                                This process is just as easy as using Azure, and somewhat better as it enables automatic source-control.
+
+                            </p>
                         </div>
 
-                        <div class="col-md-3 col-md-offset-1 col-md-pull-4">
+                        <div class="col-md-3 col-md-offset-2 col-md-pull-4">
                             <h2>About</h2>
                             <p>
                                 This site was developed using HTML, CSS and JavaScript along with various extras. Bootstrap was the primary framework for the website. I also used
@@ -355,6 +352,10 @@
         </div>
     </div>-->
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

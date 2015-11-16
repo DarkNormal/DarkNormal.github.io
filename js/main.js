@@ -30,20 +30,20 @@
             return false;
         }
     });
-
     $('main').scroll(function () {
         $(".slideanim").each(function () {
             var pos = $(this).offset().top;
             var winTop = $(window).scrollTop();
             if (pos < winTop + 600) {
-                if($(this).hasClass('timeline-panel-right')){
+                if ($(this).hasClass('timeline-panel-right')) {
                     $(this).addClass("slide-right");
                 }
                 else {
                     $(this).addClass("slide-left");
                 }
-               
+
             }
         });
     });
+    
 });

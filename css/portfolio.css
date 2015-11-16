@@ -1,0 +1,8 @@
+﻿.portfolio-panel{
+    margin-top:50px;
+}
+
+.panel-default>.panel-heading{
+    background-color: rgb(63,81,181);
+    color: #fff;
+}

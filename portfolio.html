@@ -1,10 +1,273 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title></title>
-	<meta charset="utf-8" />
+    <title>About - Mark Lordan</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/portfolio.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog">
+            <div class="modal-content">
 
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Get in touch</h4>
+                </div>
+                <div class="row modal-body" style="padding:20px;">
+                    <form class="form-horizontal col-sm-12" id="myForm">
+                        <div class="form-group"><label>Name <em class="required-icon">*</em></label><input type="text" class="form-control required" name="field1" data-placement="top" data-trigger="manual" placeholder="Name" aria-describedby="field1"></div>
+                        <div class="form-group"><label>E-mail <em class="required-icon">*</em></label><input type="text" class="form-control required" name="field2" data-placement="top" data-trigger="manual" placeholder="E-mail" aria-describedby="field2"></div>
+                        <div class="form-group"><label>Website</label><input type="text" class="form-control" name="field3" data-placement="top" data-trigger="manual" placeholder="Website" aria-describedby="field2"></div>
+                        <div class="form-group"><label>Message <em class="required-icon">*</em></label><textarea class="form-control" placeholder="Your message here.." name="field4" data-placement="top" data-trigger="manual"></textarea></div>
+                        <div class="form-group"><button type="submit" class="btn btn-success">Send</button> <button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span><a class="btn mdl-layout-title" id="title" href="index.html">Mark Lordan</a></span>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                  mdl-textfield--floating-label mdl-textfield--align-right">
+                    <label class="mdl-button mdl-js-button mdl-button--icon"
+                           for="fixed-header-drawer-exp">
+                        <i class="material-icons">search</i>
+                    </label>
+                    <div class="mdl-textfield__expandable-holder">
+                        <input class="mdl-textfield__input" type="text" name="sample"
+                               id="fixed-header-drawer-exp">
+                    </div>
+                </div>
+                <!-- Navigation. We hide it in small screens. -->
+                <nav class="mdl-navigation mdl-layout--large-screen-only">
+                    <a class="mdl-navigation__link" href="index.html">Home</a>
+                    <a class="mdl-navigation__link" href="about.html">About</a>
+                    <a class="mdl-navigation__link" href="portfolio.html">Portfolio</a>
+                    <div class="mdl-navigation__link btn-group social-section">
+                        <a class="mdl-navigation__link btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Contact <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-left">
+                            <li><a class="btn" href="http://www.twitter.com/marklordan" target="_blank"><i class="fa fa-twitter fa-2x"></i><span class="social-names">Twitter</span></a></li>
+                            <li><a class="btn" href="https://ie.linkedin.com/in/marklordan" target="_blank"><i class="fa fa-linkedin fa-2x"></i><span class="social-names">Linkedin</span></a></li>
+                            <li><a class="btn" href="https://instagram.com/marklordan/" target="_blank"><i class="fa fa-instagram fa-2x"></i><span class="social-names">Instagram</span></a></li>
+                            <li><a class="btn" href="https://github.com/DarkNormal/" target="_blank"><i class="fa fa-github fa-2x"></i><span class="social-names">Github</span></a></li>
+                            <li><a class="btn" data-toggle="modal" data-target="#myModal" href="#"><i class="fa fa-envelope-o fa-2x"></i><span class="social-names">E-mail</span></a></li>
+                        </ul>
+                    </div>
+
+                </nav>
+            </div>
+
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title"><span style="position:absolute; bottom: 4px;">Navigation</span></span>
+
+            <nav class="mdl-navigation">
+
+                <a class="mdl-navigation__link" href="index.html">Home</a>
+                <a class="mdl-navigation__link" href="about.html">About</a>
+                <a class="mdl-navigation__link" href="portfolio.html">Portfolio</a>
+                <div class="android-drawer-separator"></div>
+                <span class="mdl-navigation__link" href>Contact me</span>
+                <a class="mdl-navigation__link btn" href="http://www.twitter.com/marklordan" target="_blank"><i class="fa fa-twitter fa-2x"></i><span class="social-names"> Twitter</span></a>
+                <a class="mdl-navigation__link btn" href="https://ie.linkedin.com/in/marklordan" target="_blank"><i class="fa fa-linkedin fa-2x"></i><span class="social-names"> Linkedin</span></a>
+                <a class="mdl-navigation__link btn" href="https://instagram.com/marklordan/" target="_blank"><i class="fa fa-instagram fa-2x"></i><span class="social-names"> Instagram</span></a>
+                <a class="mdl-navigation__link btn" href="https://github.com/DarkNormal/" target="_blank"><i class="fa fa-github fa-2x"></i><span class="social-names"> Github</span></a>
+                <a class="mdl-navigation__link btn" data-toggle="modal" data-target="#myModal" href="#"><i class="fa fa-envelope-o fa-2x"></i><span class="social-names"> E-mail</span></a>
+
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <div class="page-content" id="page-content">
+                <div class="container-fluid portfolio-panel">
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingOne">
+                                <h4 class="panel-title">
+                                    <a class="" role="button" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        College Projects
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <img class="img-responsive" src="assets/img/2ndyearproject.png" />
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <h4>2nd Year Project - Hotel Reservation and Management console</h4>
+                                            <p>
+                                                This project was a group of four assignment, to create a Java-based application with database interaction. A hotel management console was chosen as the operations developed would be applicable to many different situations.
+                                                A database-first approach was adopted, however this changed to a code-first approach as there were a large number of model changes occuring regularly. My main activity was to focus on room / booking operations, the primary feature
+                                                of the application. The application interacted with a local Oracle SQL database, where I used SQL queries and stored proceedures for many features. I also focused on improving the UX of the application, such as converting everything to a JPanels
+                                                rather than JFrames with Java Swing. I received an A grade of 94% for the project. The source code is available <a href="https://github.com/DarkNormal/Hotel-System-Project">here</a>.
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4 col-sm-push-8">
+                                            <img class="img-responsive" src="assets/img/3rdyearapp-small.png" />
+                                        </div>
+                                        <div class="col-sm-8 col-sm-pull-4">
+                                            <h4>3rd Year Project - Restaurant Discovery and Reservation Android application</h4>
+                                            <p>
+                                                As a group of 2, we developed an Android application to find nearby restaurants and reserve tables with an interface similar to flight, train and cinema tickets. This interface was built using various images of table types, which were saved to an
+                                                Azure SQL database. Many integrations were included in the android apllication, including push notifications, email messaging service, Google Maps, and Google Calendar for saving reservations. The server backend for this project was developed in Node.js
+                                                on Azure, which allowed the Android application to be fully distributed. Authentication was provided with many social platofrms such as Google+, Twitter and Facebook. A restaurant portal was also developed to register restaurants, manage bookings and
+                                                add / change floorplans. This portal was made as an ASP.NET MVC web application, with Entity Framework used as data-persistence with the database and LINQ used throughout. Overall an A grade was award to this project.
+                                                The source code for the project can be found <a href="https://github.com/DarkNormal/3rd-year-app">here</a> for the Android app, and <a href="https://github.com/DarkNormal/prototypeBourGuest">here</a> for the .NET web app.
+                                            </p>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <img src="assets/img/4thyearmockup.png" class="img-responsive" />
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <h4>Final Year Project - Event Finder and Organiser</h4>
+                                            <p>
+                                                During the summer I thought of some cool ideas for a new event orgainsing app, similar to Eventbrite and Meetup. After some experimentation with similar applications, I discovered that nothing with features I came up existed.
+                                                The application, designed entirely to Material Design specs, will interact with a .NET web API that will perform much of the heavy-processing. Location-based algorithms will suggest the nearest or highest-rated venue for specific
+                                                event-types, and the application itself will be entirely modular for the event organiser. Different features can be added for each event, which will make every event slightly different to the next - something which I criticised
+                                                in relation to Facebook events. I'm currently in the early development stages of the project, but the source code and my progress can be viewed <a href="https://github.com/DarkNormal/ModernEventApp">here</a>.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingTwo">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Web Design and Development
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <img class="img-responsive" src="assets/img/tipple.png" />
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <h4>MyDealDoc.ie</h4>
+                                            <p>
+                                                Through a contact I got in touch with Mike and David, who had just launched a new mobile app for finding the cheapest drink deals in shops and offlicenses. The website for promoting the application was already made with WordPress,
+                                                however it was extremely basic and did not do a great job at marketing the application. I suggested some changes, took feedback from meetings with David, Mike and Gareth, and over the course of some months I completed the WordPress
+                                                site for them. I used Photoshop to create higher quality mock ups and images for the site, and used my knowledge of WordPress to create an immersive and responsive website. The founders of MyDealDoc.ie were very happy with my work.
+                                                Check out the website <a href="https://www.mydealdoc.ie">here</a>.
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <h4>Garda Motor Club</h4>
+                                            <p>
+                                                The Garda Motor Club holds many events throughout each year, such as rallies, car shows, fundraisers and other race-types. I manage the website for the club, uploading documents and entry-forms, updating content, and managing the
+                                                Facebook and Twitter accounts. This job is usually quiet for most of the year, but can become quite intensive around the time of events. I'm currently in the process of redesigning the website to use WordPress, and I will be building 
+                                                a custom theme for the website. It currently uses a WYSIWYG editor provided by the hosting provider, but it only works on Mozilla Firefox. The site can be viewed <a href="http://www.gardamotorclub.com">here</a>.
+                                            </p>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <h4>IT Tallaght Snowsports Society</h4>
+                                            <p>
+                                                When I joined IT Tallaght, I wasn't expecting a snowsports society. When I seen it, I immediately signed up and quickly moved up through the committee. eventually standing as chairperson. I designed and created a website for the
+                                                society as the only point-of-contact was a Facebook Group page or email. Everyone really enjoyed the website, however I never made it responsive for reasons unknown to me. Maybe I didn't know how to back then as this was one of my first
+                                                websites created entirely from scratch. I was very happy with the design and layout of the page, but the lack of responsiveness is disheartening. I might go back to it some day just to change it, however the society is not currently active so
+                                                this is unknown. You can take a look at the website <a href="https://www.ittdsnowsports.ie">here</a>.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <img class="img-responsive" src="assets/img/cafe.png" />
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <h4>Canal Café Vicarstown</h4>
+                                            <p>
+                                                A café opening in Vicarstown needed to generate some hype before opening as it's a relatively secluded area. I was commissioned to create an online presence for the café, so I created a website, TripAdvisor page, and a Facebook Page. I created the website using WordPress
+                                                as the owner is not tech-savvy, so WordPress would be much easier to use for them. Using a restaurant-theme for WordPress, I customised the layout to suit the café style, and i took some images of the café to include on the page. After opening, some chages were required
+                                                and some better images were taken, so I updated the site accordingly. The café is closed for the winter months, but it has been a success so far. The Facebook page has over 700 likes, the website is on page 1 of Google searches, and the TripAdvisor page has a 5 star rating.
+
+                                                Check out the website <a href="https://www.canalcafe.ie">here</a>.
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid footer-container">
+                    <div class="row footer">
+                        <!-- Disabled due to bug with Material Design layout- from github -->
+                        <div class="col-md-3 col-md-push-8">
+                            <h2>GitHub Pages</h2>
+                            <p>
+                                By committing all the website files to a GitHub repository, a website can be accessed using GitHub Pages. The repository must be called your_github_username.github.io, and this will allow the website to be created.
+                                This process is just as easy as using Azure, and somewhat better as it enables automatic source-control.
+
+                            </p>
+                        </div>
+
+                        <div class="col-md-3 col-md-offset-2 col-md-pull-4">
+                            <h2>About</h2>
+                            <p>
+                                This site was developed using HTML, CSS and JavaScript along with various extras. Bootstrap was the primary framework for the website. I also used
+                                FontAwesome for the icons which provides scalable icons. <br /><a href="this-website.html" target="_blank" class="link-no-pink">Read the full website breakdown here > </a>
+                            </p>
+                        </div>
+                        <div class="col-md-4 col-md-pull-4" id="social-links">
+                            <h2>Connect with me</h2>
+                            <a class="btn" href="http://www.twitter.com/marklordan" target="_blank" title="Twitter"><i class="fa fa-twitter fa-3x"></i></a>
+                            <a class="btn" href="https://ie.linkedin.com/in/marklordan" target="_blank" title="Linkedin"><i class="fa fa-linkedin fa-3x"></i></a>
+
+                            <a class="btn" href="https://instagram.com/marklordan/" target="_blank" title="Instagram"><i class="fa fa-instagram fa-3x"></i></a>
+                            <a class="btn" href="https://github.com/DarkNormal/" target="_blank" title="GitHub"><i class="fa fa-github fa-3x"></i></a>
+                            <a class="btn" data-toggle="modal" data-target="#myModal" title="E-mail" href="#"><i class="fa fa-envelope-o fa-3x"></i></a>
+                            <div style=" padding-top:5%">
+                                <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent link-no-pink" href="https://github.com/DarkNormal/DarkNormal.github.io" target="_blank">
+                                    Source Code
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
 </body>
 </html>

@@ -106,96 +106,32 @@
             <div class="page-content" id="page-content">
                 <div class="container">
                     <div class="page-header">
-                        <h1 id="timeline">About me</h1>
-                        <p>
-                            I was born in Dublin in '93 and spent most of my time between Dublin, Cork or Switzerland with my family. I've had a very keen interest in technology from the early age of 6 when
-                            I got my hands on my first original PlayStation. From this I progressed through a plethora of other devices and I'm still gathering more to this day. My first experience of programming was at 12 when I enrolled
-                            in Technology. Working with circuit boards, components and microcontrollers was a great experience, and set me straight towards studying Computer Science in the future. Much better than my aspiration of Bin-man at age 8.
-                        </p>
-                        <p>
-                            I graduated secondary school with an award for academic excellence in Technology and recieved a total of 440 points in the Leaving Certificate. From there I was accepted into the Institute of Technology in Tallaght, Dublin where I would
-                            study Computing - a very practical and broad coure in comparison to other Computer Science courses. The major topics covered in the last 4 years include Software Development, Web Design and Development, Networking (in a certified Cisco environment, using physical components),
-                            Advanced Database Systems and Object Orientated System Analysis and Design.
-                        </p>
-                        <p>
-                            While I was still in school, I got a part-time job in Glanbia working in a distribution warehouse. I started in 2011 and I quickly became one of the most consistent workers there. I usually
-                            worked weekday evenings and every Saturday up until September 2014 when I was pressed for further commitment. This would have interfered with my college studies so I decided on what was more important for my future.
-                            <br />
-                            I now host and maintain a multitude of websites, including designing new interfaces for individuals or businesses. I recently created a small Java application for a business which saved them at least €1500 in upfront-costs as well as significantly increased
-                            the efficiency of what was previously being used.
-
-
-                        </p>
+                        <h1>Site Breakdown</h1>
+                        <hr />
                     </div>
-                    <ul class="timeline">
-                        <li style="text-align:center;"><span style="padding-top:-20px;">Education</span></li>
-                        <li>
-                            <div class="timeline-badge timeline-panel-right slideanim"><i class="fa fa-graduation-cap"></i></div>
-                            <div class="timeline-panel timeline-panel-right slideanim">
-                                <div class="timeline-heading">
-                                    <h5 class="timeline-title">440 points earned in the Leaving Certificate</h5>
-                                    <p style="font-style:italic">HFCS Rathcoole, Dublin</p>
-                                    <p>
-                                        2006 - 2012 <br />
-                                    </p>
-                                </div>
-                                <div class="timeline-body">
-                                    <p>
-                                        My best subjcts were Technology, Physics, and English.
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-badge timeline-panel-left slideanim"><i class="fa fa-graduation-cap"></i></div>
-                            <div class="timeline-panel timeline-panel-left slideanim" >
-                                <div class="timeline-heading">
-                                    <h5 class="timeline-title">BSc. (Hons) in Computing</h5>
-                                    <!--<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11 hours ago via Twitter</small></p>-->
-                                    <p style="font-style:italic">Institute of Technology Tallaght, Dublin</p>
-                                </div>
-                                <div class="timeline-body">
-                                    
-                                    <p>
-                                        2012 - Present <br />
-                                        Overall GPA: 3.49
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li style="text-align:center;"><span style="padding-top:-20px;">Experience</span></li>
-                        <li>
-                            <div class="timeline-badge timeline-panel-right slideanim"><i class="fa fa-briefcase"></i></div>
-                            <div class="timeline-panel timeline-panel-right slideanim">
-                                <div class="timeline-heading">
-                                    <h5 class="timeline-title">Glanbia</h5>
-                                    <p style="font-style:italic">Distribution depot, Fonthill, Dublin</p>
-                                </div>
-                                <div class="timeline-body">
-                                    <p>
-                                        2011 - 2014 <br />
-                                        Received numerous praises on work efficiency, particularly in group situations and with customers.
-                                        Left in 2014 to focus on studies.
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-badge timeline-panel-left slideanim"><i class="fa fa-code"></i></div>
-                            <div class="timeline-panel timeline-panel-left slideanim">
-                                <div class="timeline-heading">
-                                    <h5 class="timeline-title">Freelance web design</h5>
-                                </div>
-                                <div class="timeline-body">
-                                    <p>2011 - Present</p>
-                                    <p>
-                                        Some previous work include MyDealDoc.ie , IT Tallaght Snowsports society, Garda Motor Club, and the Canal Café Vicarstown. Read more in my <a href="portfolio.html">portfolio</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        
-                    </ul>
+                    <h4>Home Page</h4>
+                    <p>
+                        Starting from the top, a material design navbar was added for navigation purposes. This navbar has a navigation drawer built into it's functionality, to give a native-application
+                        feeling to the website when using it on small devices. The search feature in the navbar does nothing, and is only there as a placeholder. The source for this is <a href="www.getmdl.io">Material Design Lite</a>, a framework developed by Google.
+                        <br />
+                        The Bootstrap grid was widely used throughout the website, which I created from scratch. I used different sized columns, as well as offsets and push/pull CSS classes to re-order the columns when the screen size is reduced.
+                        I previously used Bootstrap, but never knew about the push/pull feature so this was of great benefit. Offsetting columns also gave the website a better layout on larger screens, rather than each column sitting beside each other.
+                        Containers, Fluid containers and media queries were also used as part of Bootstrap. 
+                        <br />
+                        The featured portfolio section is a set width after a certain screen width via a media query, and the on-hover effect of the featured portfolio is taken from the Freelancer Bootstrap template. I attempted to create a parallax-style to the page,
+                        however this didn't work very well in Safari-based browsers, so I removed it. All of the icons are provided via FontAwesome which provides over 440 icons. Nearly all of the HTML and CSS was written by myself, only taking some advice from
+                        StackOverflow or some tutorials online. 
+                    </p>
+                    <h4>About Page</h4>
+                    <p>
+                        The About page features many of the same elements as the Home page, the navbar and the footer are the same for consistency. The timeline feature on this page is based on a Codepen by betul, but I applied some different transitions based on which side the tab is on. 
+                        The CSS and most of the HTML for the timeline is from this source. 
+                    </p>
+                    <h4>Portfolio Page</h4>
+                    <p>
+                        The default element on the portfolio page is a Bootstrap accordion element, however I changed the default action of the tabs opening and closing when another is selected. Instead, I kept the first one open and it stays open if the other is selected.
+
+                    </p>
                 </div>
 
                 <div class="container-fluid footer-container">

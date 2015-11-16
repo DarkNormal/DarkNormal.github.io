@@ -3,21 +3,20 @@
 body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
+a, a:focus, a:active, a:hover{
+    text-decoration:none;
+}
 
 
 #header {
     /*text-align: center;*/
     z-index: 2;
-    color: #fff;
     min-height: 100vh;
     position: relative;
     padding-bottom: 2em;
     background: url(../assets/img/Dublin-Liffey-Hapenny-bridge-CREDIT-Failte-Ireland-Derek-Cullen.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
-    -webkit-overflow-scrolling: touch;
+    /*-webkit-overflow-scrolling: touch;*/
 }
 
 .required-icon {
@@ -29,15 +28,6 @@ body {
     z-index: 1;
     position: relative;
     background: rgba(34, 34, 34, 0.65);
-}
-
-.heading {
-    text-align: center;
-}
-
-#intro {
-    z-index: 2;
-    position: relative;
 }
 
 .tight, .expand {
@@ -71,7 +61,6 @@ img {
 
 .button-holder {
     padding-top: 5%;
-    text-align: center;
 }
 
 .clear-btn:link, .clear-btn:visited {
@@ -114,14 +103,14 @@ img {
     font-size: 14px;
 }
 
-    .mdl-layout__drawer .mdl-navigation a.mdl-navigation__link  i {
-        -webkit-transition: all 500ms ease;
-        -moz-transition: all 500ms ease;
-        -o-transition: all 500ms ease;
-        transition: all 500ms ease;
-    }
+.mdl-layout__drawer .mdl-navigation a.mdl-navigation__link i {
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
 
-.mdl-layout__drawer .mdl-navigation a.mdl-navigation__link:hover  i {
+.mdl-layout__drawer .mdl-navigation a.mdl-navigation__link:hover i {
     color: #ff3366;
 }
 
@@ -137,10 +126,6 @@ img {
     height: 1px;
     background-color: #dcdcdc;
     margin: 8px 0;
-}
-
-#title:hover {
-    color: #fff !important;
 }
 
 .social i {
@@ -184,8 +169,8 @@ img {
                     color: #ff3366;
                 }
 
-a {
-    color: #fff;
+.white-link {
+    color: #fff !important;
     text-decoration: none;
     -webkit-transition: all 500ms ease;
     -moz-transition: all 500ms ease;
@@ -193,14 +178,9 @@ a {
     transition: all 500ms ease;
 }
 
-    a:hover {
-        color: #ff3366;
-        text-decoration: none;
-    }
-    a:active, a:link, a:visited {
-        text-decoration: none;
-        color: #fff;
-    }
+.white-text {
+    color: #fff;
+}
 
 
 .fa-3x {
@@ -212,7 +192,7 @@ a {
     margin: 0 auto;
 }
 
-div#slider {
+/*div#slider {
     overflow: hidden;
 }
 
@@ -233,9 +213,9 @@ div#slider {
         div#slider figure img {
             width: 20%;
             float: left;
-        }
+        }*/
 
-.topic-description p {
+/*.topic-description p {
     position: absolute;
     z-index: 100;
     left: 10%;
@@ -244,11 +224,7 @@ div#slider {
 
 .topic-description img {
     width: 100%;
-}
-
-.bgAndroidGreen {
-    background-color: #a4ca39;
-}
+}*/
 
 .img-holder {
     right: 0;
@@ -290,10 +266,6 @@ div#slider {
         color: #fff;
     }
 
-        .caption .caption-content i {
-            margin-top: -12px;
-        }
-
 .skills-section {
 }
 
@@ -302,25 +274,12 @@ div#slider {
         padding-top: 10%;
     }
 
-    .skills-section .skills {
-        text-align: center;
+    .skills-section .skills i {
+        padding: 0 3%;
     }
-
-        .skills-section .skills i {
-            padding: 0 3%;
-        }
 
 .skills p {
     text-align: justify;
-}
-
-.back-to-top-btn {
-    display: block;
-    visibility: hidden;
-}
-
-#backtotop:hover .back-to-top-btn {
-    visibility: visible;
 }
 
 .footer-container {
@@ -334,32 +293,20 @@ div#slider {
     color: #fff;
 }
 
-a.link-no-pink:hover {
-    color: #d4d4d4 !important;
-}
-
-.footer p {
-    font-size: 16px;
-    text-align: justify;
-}
-
-.footer #social-links a i {
-}
-
-.footer #social-links a:hover {
-    color: #FF4081 !important;
-}
-.footer #social-links a.link-no-pink:hover{
-    color:#fff !important;
-}
-.footer #social-links a:visited, a:active  {
-    color: #fff;
-    text-decoration:none;
-}
-
-.footer a i.background {
-    color: #333333;
-}
+    .footer p {
+        font-size: 16px;
+        text-align: justify;
+    }
+    .footer a, a:active, a:visited, a:focus {
+        color: #fff;
+        -moz-transition: all 500ms ease;
+        -o-transition: all 500ms ease;
+        -webkit-transition: all 500ms ease;
+        transition: all 500ms ease;
+    }
+    .footer a:hover{
+        color:#ff3366;
+    }
 
 @media (max-width:1261px) {
     .clear-btn {
