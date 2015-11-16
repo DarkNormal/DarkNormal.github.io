@@ -5,6 +5,15 @@ body {
 }
 a, a:focus, a:active, a:hover{
     text-decoration:none;
+    outline:none!important;
+}
+
+a.btn:focus{
+    color:#fff;
+}
+
+.hideme{
+    opacity:0;
 }
 
 
@@ -13,7 +22,6 @@ a, a:focus, a:active, a:hover{
     z-index: 2;
     min-height: 100vh;
     position: relative;
-    padding-bottom: 2em;
     background: url(../assets/img/Dublin-Liffey-Hapenny-bridge-CREDIT-Failte-Ireland-Derek-Cullen.jpg) no-repeat center center fixed;
     background-size: cover;
     /*-webkit-overflow-scrolling: touch;*/
@@ -27,7 +35,8 @@ a, a:focus, a:active, a:hover{
     /*text-align: center;*/
     z-index: 1;
     position: relative;
-    background: rgba(34, 34, 34, 0.65);
+    height:110vh;
+    background: rgba(34, 34, 34, 0.35);
 }
 
 .tight, .expand {
@@ -307,6 +316,14 @@ img {
     .footer a:hover{
         color:#ff3366;
     }
+#page-content {
+    height: 50vh;
+}
+#content-container{
+    height:auto;
+    min-height:100%;
+}
+
 
 @media (max-width:1261px) {
     .clear-btn {

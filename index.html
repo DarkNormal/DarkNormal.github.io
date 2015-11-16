@@ -14,13 +14,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <!--<div id="loader-wrapper">
+    <div id="loader-wrapper">
         <div id="loader"></div>
 
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
 
-    </div>-->
+    </div>
     <!-- Always shows a header, even in smaller screens. -->
     <!-- Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -72,11 +72,11 @@
                     <a class="mdl-navigation__link" href="index.html">Home</a>
                     <a class="mdl-navigation__link" href="about.html">About</a>
                     <a class="mdl-navigation__link" href="portfolio.html">Portfolio</a>
-                    <div class="mdl-navigation__link btn-group social-section">
+                    <div class="mdl-navigation__link btn-group social-section " id="dropdown-group">
                         <a class="mdl-navigation__link btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Contact <span class="caret"></span>
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-left">
+                        <ul class="dropdown-menu dropdown-menu-left" style="margin-top:0">
                             <li><a class="btn" href="http://www.twitter.com/marklordan" target="_blank"><i class="fa fa-twitter fa-2x"></i><span class="social-names">Twitter</span></a></li>
                             <li><a class="btn" href="https://ie.linkedin.com/in/marklordan" target="_blank"><i class="fa fa-linkedin fa-2x"></i><span class="social-names">Linkedin</span></a></li>
                             <li><a class="btn" href="https://instagram.com/marklordan/" target="_blank"><i class="fa fa-instagram fa-2x"></i><span class="social-names">Instagram</span></a></li>
@@ -95,6 +95,7 @@
             <nav class="mdl-navigation">
 
                 <a class="mdl-navigation__link" href="index.html">Home</a>
+                <a class="mdl-navigation__link" href="this-website.html">Site Description</a>
                 <a class="mdl-navigation__link" href="about.html">About</a>
                 <a class="mdl-navigation__link" href="portfolio.html">Portfolio</a>
                 <div class="android-drawer-separator"></div>
@@ -123,9 +124,18 @@
                                             I'm a young Irish developer living in Dublin. Full-stack and mobile app development are my areas of expertise. I'm currently studying
                                             for a BSc(Hons) in Computing at the Institute of Technology, Tallaght.
                                         </p>
-                                        <p class="button-holder align-middle">
-                                            <a href="assets/docs/MarkLordan-resume.pdf" class="clear-btn" target="_blank">Download CV</a>
-                                        </p>
+                                        <div class="row">
+                                            <div class="col-sm-6" style=" padding: 5% 0; text-align:center">
+                                                <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent link-no-pink" href="../assets/docs/MarkLordan-resume.pdf" download="MarkLordan-resume.pdf" target="_blank">
+                                                    Download CV
+                                                </a>
+                                            </div>
+                                            <div class="col-sm-6" style=" padding:5% 0; text-align:center">
+                                                <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent link-no-pink" href="../assets/docs/MarkLordan-resume.pdf" target="_blank">
+                                                    View Resume
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-4 col-sm-pull-8">
@@ -143,12 +153,12 @@
                 </div>
                 <div class="container-fluid portfolio-container" style="text-align:center">
                     <section id="portfolio-work">
-                        <div class="row" style="padding-top:20%; padding-bottom:5%">
+                        <div class="row" style="padding-top:10%; padding-bottom:5%">
                             <div class="col-sm-12">
                                 <h3 class="heading">Featured Portfolio</h3>
                             </div>
                         </div>
-                        <div class="row portfolio-row">
+                        <div class="row portfolio-row hideme">
                             <div class="col-sm-6 img-holder">
                                 <a href="portfolio.html" class="portfolio-link">
                                     <div class="col-sm-12 caption">
@@ -174,7 +184,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="row portfolio-row">
+                        <div class="row portfolio-row hideme">
                             <div class="col-sm-4 img-holder">
                                 <a href="portfolio.html" class="portfolio-link">
                                     <div class="col-sm-12 caption">
@@ -187,7 +197,7 @@
                                 </a>
                             </div>
                             <div class="col-sm-4 img-holder">
-                                <a href="/portfolio/tipple.html" class="portfolio-link">
+                                <a href="portfolio.html" class="portfolio-link">
                                     <div class="col-sm-12 caption">
                                         <div class="caption-content">
                                             <h3>Tipple Doc</h3>
@@ -213,12 +223,12 @@
                     </section>
                 </div>
                 <div class="container-fluid skills-section">
-                    <div class="row">
+                    <div class="row hideme">
                         <div class="col-sm-12">
                             <h3 class="heading align-middle">Skills and Familiar Technologies</h3>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row hideme">
                         <div class="col-sm-6 col-sm-push-6 expand">
                             <a href="portfolio.html" class="" title="image">
                                 <img src="assets/img/android-dev.png" />
@@ -234,7 +244,7 @@
                         </div>
 
                     </div>
-                    <div class="row">
+                    <div class="row hideme">
                         <div class="col-sm-6 skills">
                             <div class="align-middle">
                                 <span class="fa-stack fa-2x">

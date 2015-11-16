@@ -47,7 +47,7 @@
         <header class="mdl-layout__header">
             <div class="mdl-layout__header-row">
                 <!-- Title -->
-                <span><a class="btn mdl-layout-title" id="title" href="index.html">Mark Lordan</a></span>
+                <span><a class="btn mdl-layout-title white-link" id="title" href="index.html">Mark Lordan</a></span>
                 <!-- Add spacer, to align navigation to the right -->
                 <div class="mdl-layout-spacer"></div>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
@@ -66,11 +66,11 @@
                     <a class="mdl-navigation__link" href="index.html">Home</a>
                     <a class="mdl-navigation__link" href="about.html">About</a>
                     <a class="mdl-navigation__link" href="portfolio.html">Portfolio</a>
-                    <div class="mdl-navigation__link btn-group social-section">
+                    <div class="mdl-navigation__link btn-group social-section" id="dropdown-group">
                         <a class="mdl-navigation__link btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Contact <span class="caret"></span>
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-left">
+                        <ul class="dropdown-menu dropdown-menu-left" style="margin-top:0">
                             <li><a class="btn" href="http://www.twitter.com/marklordan" target="_blank"><i class="fa fa-twitter fa-2x"></i><span class="social-names">Twitter</span></a></li>
                             <li><a class="btn" href="https://ie.linkedin.com/in/marklordan" target="_blank"><i class="fa fa-linkedin fa-2x"></i><span class="social-names">Linkedin</span></a></li>
                             <li><a class="btn" href="https://instagram.com/marklordan/" target="_blank"><i class="fa fa-instagram fa-2x"></i><span class="social-names">Instagram</span></a></li>
@@ -89,6 +89,7 @@
             <nav class="mdl-navigation">
 
                 <a class="mdl-navigation__link" href="index.html">Home</a>
+                <a class="mdl-navigation__link" href="this-website.html">Site Description</a>
                 <a class="mdl-navigation__link" href="about.html">About</a>
                 <a class="mdl-navigation__link" href="portfolio.html">Portfolio</a>
                 <div class="android-drawer-separator"></div>
@@ -103,7 +104,7 @@
         </div>
         <main class="mdl-layout__content">
             <div class="page-content" id="page-content">
-                <div class="container-fluid portfolio-panel">
+                <div class="container-fluid portfolio-panel" id="content-container">
                     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                         <div class="panel panel-default">
                             <div class="panel-heading" role="tab" id="headingOne">
@@ -230,7 +231,7 @@
                     </div>
                 </div>
 
-                <div class="container-fluid footer-container">
+                <div class="container-fluid footer-container" id="footer">
                     <div class="row footer">
                         <!-- Disabled due to bug with Material Design layout- from github -->
                         <div class="col-md-3 col-md-push-8">

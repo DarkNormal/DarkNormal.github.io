@@ -16,7 +16,7 @@
     height: 150px;
     margin: -75px 0 0 -75px;
     border: 3px solid transparent;
-    border-top-color: #311B92;
+    border-top-color: #1A237E;
     border-radius: 50%;
     z-index: 1500;
     -webkit-animation: spin 2s linear infinite;
@@ -32,7 +32,7 @@
         right: 5px;
         bottom: 5px;
         border: 3px solid transparent;
-        border-top-color: #5E35B1;
+        border-top-color: #3949AB;
         border-radius: 50%;
         -webkit-animation: spin 3s linear infinite;
         animation: spin 3s linear infinite;
@@ -46,7 +46,7 @@
         right: 15px;
         bottom: 15px;
         border: 3px solid transparent;
-        border-top-color: #9575CD;
+        border-top-color: #5C6BC0;
         border-radius: 50%;
         -webkit-animation: spin 1.5s linear infinite;
         animation: spin 1.5s linear infinite;
