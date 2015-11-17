@@ -13,16 +13,16 @@ a.btn:focus{
 }
 
 .hideme{
-    opacity:0;
+    /*opacity:0;*/
 }
 
 
 #header {
     /*text-align: center;*/
     z-index: 2;
-    min-height: 100vh;
+    height: 130vh;
     position: relative;
-    background: url(../assets/img/Dublin-Liffey-Hapenny-bridge-CREDIT-Failte-Ireland-Derek-Cullen.jpg) no-repeat center center fixed;
+    background: url(../assets/img/Dublin-Liffey-Hapenny-bridge-CREDIT-Failte-Ireland-Derek-Cullen.jpg);
     background-size: cover;
     /*-webkit-overflow-scrolling: touch;*/
 }
@@ -35,8 +35,7 @@ a.btn:focus{
     /*text-align: center;*/
     z-index: 1;
     position: relative;
-    height:110vh;
-    background: rgba(34, 34, 34, 0.35);
+    height:130vh;
 }
 
 .tight, .expand {
