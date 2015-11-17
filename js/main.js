@@ -1,8 +1,17 @@
 ﻿$(document).ready(function () {
 
-    setTimeout(function () {
-        $('body').addClass('loaded');
-    }, 3000);
+    if ($.cookie('preloader'))
+    {
+        $('#loader-wrapper').hide();
+    }
+    else {
+        setTimeout(function(){
+            $('body').addClass('loaded');
+        }, 3000);
+
+        // and now we create 1 year cookie
+        $.cookie('preloader', true, {path: '/', expire: 365});
+    }
 
     $('#myForm').validate({
         rules: {

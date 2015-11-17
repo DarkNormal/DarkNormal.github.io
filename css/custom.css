@@ -20,7 +20,7 @@ a.btn:focus{
 #header {
     /*text-align: center;*/
     z-index: 2;
-    height:200vh;
+    height:110vh;
     position: relative;
     background: url(../assets/img/Dublin-Liffey-Hapenny-bridge-CREDIT-Failte-Ireland-Derek-Cullen.jpg);
     background-size: cover;
