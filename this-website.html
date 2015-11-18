@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>About - Mark Lordan</title>
+    <title>Site Breakdown - Mark Lordan</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">
@@ -12,6 +12,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
     <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
     <script src="js/main.js"></script>
     <script src="js/time-line-animation.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -108,32 +109,113 @@
                 <div class="container">
                     <div class="page-header">
                         <h1>Site Breakdown</h1>
+                        <h5>Click on each element for details</h5>
                     </div>
-                    <h4>Home Page</h4>
                     <p>
-                        Starting from the top, a material design navbar was added for navigation purposes. This navbar has a navigation drawer built into it's functionality, to give a native-application
-                        feeling to the website when using it on small devices. The search feature in the navbar does nothing, and is only there as a placeholder. The source for this is <a href="www.getmdl.io">Material Design Lite</a>, a framework developed by Google.
-                        <br />
-                        The Bootstrap grid was widely used throughout the website, which I created from scratch. I used different sized columns, as well as offsets and push/pull CSS classes to re-order the columns when the screen size is reduced.
-                        I previously used Bootstrap, but never knew about the push/pull feature so this was of great benefit. Offsetting columns also gave the website a better layout on larger screens, rather than each column sitting beside each other.
-                        Containers, Fluid containers and media queries were also used as part of Bootstrap. 
-                        <br />
-                        The featured portfolio section is a set width after a certain screen width via a media query, and the on-hover effect of the featured portfolio is taken from the Freelancer Bootstrap template. I attempted to create a parallax-style to the page,
-                        however this didn't work very well in Safari-based browsers, so I removed it. All of the icons are provided via FontAwesome which provides over 440 icons. Nearly all of the HTML and CSS was written by myself, only taking some advice from
-                        StackOverflow or some tutorials online. 
+                        I'm a Computing student, and I did not use any template for this website. I did use an alternative to Bootstrap - Material Design Lite by Google, for the navigation bar / drawer and for some other styles,
+                        but I implemented these myself. The page-preloader is taken from a site which I thought would be a nice element if pre-loading the page was required. The image background on the home page can be slow to load 
+                        on some connections, but the loader itself is not required. Some Javascript / JQuery was taken from various CodePens and has been marked in the source files.
                     </p>
-                    <h4>About Page</h4>
-                    <p>
-                        The About page features many of the same elements as the Home page, the navbar and the footer are the same for consistency. The timeline feature on this page is based on a Codepen by betul, but I applied some different transitions based on which side the tab is on. 
-                        The CSS and most of the HTML for the timeline is from this source. 
-                    </p>
-                    <h4>Portfolio Page</h4>
-                    <p>
-                        The default element on the portfolio page is a Bootstrap accordion element, however I changed the default action of the tabs opening and closing when another is selected. Instead, I kept the first one open and it stays open if the other is selected.
+                    
+                    <div class="row">
 
-                    </p>
+                        <div class="col-sm-6">
+                            <h4>Bootstrap elements used</h4>
+                            <div class="list-group">
+                                <button class="list-group-item collapse-group show-more">
+                                    <span class="badge">Most used</span>
+                                    <h5 class="list-group-item-heading">Grid System</h5>
+                                    <p class="list-group-item-text collapse">
+                                        I used the Bootstrap Grid for almost everything on this site. Having previously used Bootstrap, I considered myself knowledgable with the Grid, however I learned advanced features of using it
+                                        such as offsetting columns (can be used to center content rather than margin: 0 auto hack) and particularly pushing and pulling columns to enable re-ordering of content on a smaller screen.
+                                        This can re-order columns ABC in desktop to CBA or any other variation on a smaller screen.
+                                    </p>
+                                </button>
+                                <button class="list-group-item collapse-group show-more">
+                                    <span class="badge">5 usages</span>
+                                    <h5 class="list-group-item-heading">Dropdown</h5>
+                                    <p class="list-group-item-text collapse">
+                                        I customised the dropdown behaviour with a :hover CSS class, so that there was no click required for the dropdown present in the navbar
+                                    </p>
+                                </button>
+                                <button class="list-group-item collapse-group show-more">
+                                    <span class="badge">4 usages</span>
+                                    <h5 class="list-group-item-heading">Input groups &amp; labels</h5>
+                                    <p class="list-group-item-text collapse">
+                                        Within the contact modal, I added 4 input fields for information to be included in an email to myself.
+                                    </p>
+                                </button>
+                                <button class="list-group-item collapse-group show-more">
+                                    <span class="badge">This is a badge</span>
+                                    <h5 class="list-group-item-heading">Badges &amp; list groups</h5>
+                                    <p class="list-group-item-text collapse">
+                                        This content is within a list-group, which I thought is a nice way of aggregating information into a Bootstrap-styled list. I added some JQuery for the details to appear onClicked event.
+                                    </p>
+                                </button>
+                                <button class="list-group-item collapse-group show-more">
+                                    <span class="badge">1 usage</span>
+                                    <h5 class="list-group-item-heading">Accordion &amp; Panels</h5>
+                                    <p class="list-group-item-text collapse">
+                                        I used an accordion for my portfolio page, however I could use a list group similar to this element instead. I changed the default behaviour of the accordion to be similar to this element,
+                                        where the panels stay open unless they are clicked on again, rather than collapsing when another is selected.
+                                    </p>
+                                </button>
+                                <button class="list-group-item collapse-group show-more">
+                                    <span class="badge">1 usage</span>
+                                    <h5 class="list-group-item-heading">Modal</h5>
+                                    <p class="list-group-item-text collapse">
+                                       Used for the contact via email option. This modal contains JavaScript to validate information entered.
+                                    </p>
+                                </button>
+                            </div>
+
+                        </div>
+                        <div class="col-sm-6">
+                            <h4>Non-Bootstrap elements</h4>
+                            <div class="list-group">
+                                <button class="list-group-item collapse-group show-more">
+                                    <span class="badge">Many usages</span>
+                                    <h5 class="list-group-item-heading">CSS animations</h5>
+                                    <p class="list-group-item-text collapse">
+                                        I used many CSS animations for various elements, the most used would be the hover transition of anchor links. This particular transition is just a slow ease-in-and-out transition for the text color,
+                                        but small animations like this can make websites stand out and feel mor refined.
+                                    </p>
+                                </button>
+                                <button class="list-group-item collapse-group show-more">
+                                    <span class="badge">Many usages</span>
+                                    <h5 class="list-group-item-heading">Material Design Lite framework</h5>
+                                    <p class="list-group-item-text collapse">
+                                        This framework provides an alternative style to Bootstrap in accordance with Google's Material Design guidelines. I used a navbar / navigation drawer element, buttons, and cards for various sections.
+                                    </p>
+                                </button>
+                                <button class="list-group-item collapse-group show-more">
+                                    <span class="badge">Many usages</span>
+                                    <h5 class="list-group-item-heading">FontAwesome icons</h5>
+                                    <p class="list-group-item-text collapse">
+                                        Instead of using Bootstrap's limited glyphicons, I opted to use FontAwesome icons, which contain over 440 icons. I used many of these icons, including overlapping icons on top of one another to create new icons.
+                                    </p>
+                                </button>
+                                <button class="list-group-item collapse-group show-more">
+                                    <span class="badge">1 usage</span>
+                                    <h5 class="list-group-item-heading">Timeline</h5>
+                                    <p class="list-group-item-text collapse">
+                                        The base timeline element was taken from a CodePen, however I applied a custom animation using keyframes to it to allow the information panels to slide in from either side, depending on the
+                                        side that the panel is on.
+                                    </p>
+                                </button>
+                                <button class="list-group-item collapse-group show-more">
+                                    <span class="badge">1 usage</span>
+                                    <h5 class="list-group-item-heading">Pre-loader &amp; JQuery cookies</h5>
+                                    <p class="list-group-item-text collapse">
+                                        To only show the pre-loader once, I used the JQuery cookie plugin to save a cookie and determine with this whether to show it or not. I set the cookie to 365 days, however this could be changed to anything of choice.
+                                        I check if the cookie is there via JavaScript, if not I display the pre-loader.
+                                    </p>
+                                </button>
+                            </div>
+                    </div>
+
                 </div>
-
+</div>
                 <div class="container-fluid footer-container">
                     <div class="row footer">
                         <!-- Disabled due to bug with Material Design layout- from github -->

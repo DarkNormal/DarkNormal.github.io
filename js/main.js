@@ -60,6 +60,13 @@
                 $('b', this).toggleClass("caret caret-up");                
             });
 
+    $('.list-group .show-more').on('click', function (e) {
+        e.preventDefault();
+        var $this = $(this);
+        var $collapse = $this.closest('.collapse-group').find('.collapse');
+        $collapse.collapse('toggle');
+    });
+
     // /* Every time the window is scrolled ... */
     // $('main').scroll(function () {
 
